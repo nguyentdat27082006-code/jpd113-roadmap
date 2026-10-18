@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sổ tay JPD113</title>
+  <meta name="description" content="Tổng hợp kiến thức và lộ trình học môn JPD113 – Tiếng Nhật sơ cấp 1 (できる日本語 初級, bài 1–3).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="course">JPD113 – Tiếng Nhật sơ cấp 1 (A1.1), lớp SE2004</p>
+      <h1><span class="jp" lang="ja">日本語</span> Sổ tay ôn tập</h1>
+      <p class="lede">Toàn bộ kiến thức từ học liệu trên EduNext, xếp theo đúng 20 slot trên lớp, kèm hướng dẫn thi nói cuối kỳ.</p>
+      <div class="strip" id="strip" aria-label="Tiến độ 20 slot"></div>
+      <p class="strip-note" id="strip-note"></p>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Mục lục">
+    <div class="wrap">
+      <a href="#lo-trinh">Lộ trình</a>
+      <a href="#bang-chu">Bảng chữ</a>
+      <a href="#bai-1">Bài 1</a>
+      <a href="#bai-2">Bài 2</a>
+      <a href="#bai-3">Bài 3</a>
+      <a href="#thi-noi">Thi nói</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="lo-trinh">
+      <h2>Lộ trình học</h2>
+      <p class="intro">Chia 20 slot thành 5 giai đoạn. Mỗi giai đoạn có mục tiêu cần đạt và việc nên tự làm ở nhà.</p>
+      <div id="phases"></div>
+    </section>
+
+    <section id="bang-chu">
+      <h2>Bảng chữ cái</h2>
+      <div class="toggle-row" role="group" aria-label="Chọn bảng chữ">
+        <button type="button" class="seg is-on" data-kana="hira">Hiragana</button>
+        <button type="button" class="seg" data-kana="kata">Katakana</button>
+        <label class="check"><input type="checkbox" id="hide-romaji"> Ẩn romaji để tự kiểm tra</label>
+      </div>
+      <h3>Âm cơ bản</h3>
+      <div class="kana-grid" id="kana-basic"></div>
+      <h3>Âm đục, bán đục</h3>
+      <div class="kana-grid" id="kana-dakuten"></div>
+      <h3>Âm ghép</h3>
+      <div class="kana-grid yoon" id="kana-yoon"></div>
+      <div id="kata-special"></div>
+      <h3>Quy tắc phát âm</h3>
+      <div class="rules" id="kana-rules"></div>
+      <h3>Trang web tự luyện</h3>
+      <ul class="links" id="kana-links"></ul>
+    </section>
+
+    <section id="bai-1">
+      <h2>Bài 1 <span class="jp" lang="ja">第1課</span> – Giới thiệu bản thân</h2>
+      <h3>Ngữ pháp</h3>
+      <div class="grammar" id="g-b1"></div>
+      <h3>Từ vựng <button type="button" class="mini" data-hide="v-b1">Ẩn nghĩa</button></h3>
+      <div class="vocab" id="v-b1"></div>
+      <h3>Kanji</h3>
+      <div class="kanji" id="k-b1"></div>
+      <h3>Tháng và ngày</h3>
+      <div class="dates" id="dates"></div>
+    </section>
+
+    <section id="bai-2">
+      <h2>Bài 2 <span class="jp" lang="ja">第2課</span> – Mua sắm</h2>
+      <h3>Ngữ pháp</h3>
+      <div class="grammar" id="g-b2"></div>
+      <h3>Từ vựng <button type="button" class="mini" data-hide="v-b2">Ẩn nghĩa</button></h3>
+      <div class="vocab" id="v-b2"></div>
+      <h3>Kanji số đếm và tiền</h3>
+      <div class="kanji" id="k-b2"></div>
+      <h3>Số và giá tiền</h3>
+      <div class="numbers" id="numbers"></div>
+    </section>
+
+    <section id="bai-3">
+      <h2>Bài 3 <span class="jp" lang="ja">第3課</span> – Thời gian và sinh hoạt</h2>
+      <p class="notice">Học liệu bài 3 chưa được đăng trên EduNext. Phần này tóm tắt theo đề cương slot 15–19 để học trước.</p>
+      <h3>Ngữ pháp</h3>
+      <div class="grammar" id="g-b3"></div>
+      <h3>Giờ, phút, thứ</h3>
+      <div class="numbers" id="time"></div>
+    </section>
+
+    <section id="thi-noi">
+      <h2>Thi nói cuối kỳ</h2>
+      <p class="intro" id="exam-format"></p>
+      <div class="exam-parts" id="exam-parts"></div>
+      <h3>Lưu ý khi thi</h3>
+      <ul class="notes" id="exam-notes"></ul>
+      <h3>Bài đọc mẫu</h3>
+      <p class="reading jp" lang="ja" id="reading"></p>
+      <h3>Câu hỏi không tranh</h3>
+      <div class="qa" id="qa-nopic"></div>
+      <h3>Câu hỏi theo tranh</h3>
+      <div id="qa-pic"></div>
+      <p class="fine">Câu trả lời mẫu là gợi ý để luyện; hãy thay bằng thông tin thật của bạn.</p>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    Tổng hợp từ học liệu JPD113 trên FU EduNext và đề cương 20 slot. Những phần có dấu ✎ là phần bổ sung, không có trong file gốc.
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
